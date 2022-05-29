@@ -5,7 +5,7 @@
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/mrkagelui/ptr/testing)
 [![codecov](https://codecov.io/gh/mrkagelui/ptr/branch/master/graph/badge.svg?token=UK7JNV1P7S)](https://codecov.io/gh/mrkagelui/ptr)
 [![Go Report Card](https://goreportcard.com/badge/github.com/mrkagelui/ptr)](https://goreportcard.com/report/github.com/mrkagelui/ptr)
-[![GitHub license](https://badgen.net/github/license/mrkagelui/ptr)](https://github.com/mrkagelui/ptr/blob/master/LICENSE)
+![GitHub](https://img.shields.io/github/license/mrkagelui/ptr)
 [![made-with-Go](https://img.shields.io/badge/Made%20with-Go-1f425f.svg)](https://go.dev/)
 ![goptr](goptr.png "goptr")
 
@@ -43,3 +43,29 @@ jeopardize the entire world!
 However, often we just want a pointer whose pointed value is given. This library provides a 
 syntactic sugar by assigning that constant to a variable and returning the address of that 
 variable. Thanks to generics introduced in Go 1.18, this is greatly simplified!
+
+## How to use
+
+> By the spirit of "a little copying is better than a little dependency", I encourage you to
+> simply copy the `Of` function in your project. However, if you don't mind having this dependency:
+
+__As this implementation relies on generics, you need to be using Go >1.18.__
+
+1. With Go installed, run
+```commandline
+go get -u github.com/mrkagelui/ptr
+```
+2. Import this:
+```go
+import "github.com/mrkagelui/ptr"
+```
+3. Start using it!
+```go
+package main
+
+import "github.com/mrkagelui/ptr"
+
+func main() {
+	print(ptr.Of(5))
+}
+```
