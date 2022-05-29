@@ -44,6 +44,23 @@ However, often we just want a pointer whose pointed value is given. This library
 syntactic sugar by assigning that constant to a variable and returning the address of that 
 variable. Thanks to generics introduced in Go 1.18, this is greatly simplified!
 
+**Warning:** since this works by assigning constants to variables, there is a risk of losing 
+precision or even compilation failure, for example, the following will fail to build.
+
+```go
+package main
+
+import "github.com/mrkagelui/ptr"
+
+func main() {
+	print(ptr.Of(2e308)) // will fail to build
+}
+```
+
+Because `2e308` exceeds the maximum value of `float64` type, which is inferred by the compiler, 
+but is still a legit constant, which is unlimited. For more information about constants in Go, 
+refer to [the official blog](https://go.dev/blog/constants).
+
 ## How to use
 
 > By the spirit of "a little copying is better than a little dependency", I encourage you to
