@@ -2,7 +2,7 @@
 > Check out [my value package](https://github.com/mrkagelui/value) to do value.Of()!
 
 ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/mrkagelui/ptr)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/mrkagelui/ptr/testing)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/mrkagelui/ptr/test.yml?branch=master)
 [![codecov](https://codecov.io/gh/mrkagelui/ptr/branch/master/graph/badge.svg?token=UK7JNV1P7S)](https://codecov.io/gh/mrkagelui/ptr)
 [![Go Report Card](https://goreportcard.com/badge/github.com/mrkagelui/ptr)](https://goreportcard.com/report/github.com/mrkagelui/ptr)
 ![GitHub](https://img.shields.io/github/license/mrkagelui/ptr)
